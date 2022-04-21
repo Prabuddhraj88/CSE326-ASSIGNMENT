@@ -7,13 +7,32 @@
     <title>Login Page</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<script>
+   window.submit= function submit(){
+        var email=document.getElementById("email").value;
+        var password=document.getElementById("password").value;
+        if (email==""){
+            alert ("PLEASE ENTER YOUR EMAIL");
+            return;
+
+        }
+        if (password==""){
+            alert ("PLEASE ENTER YOUR PASSWORD");
+            return;
+        }
+        alert ("YOU HAVE REGISTERED FOR HOME DESIGNS");
+
+        
+    }
+    </script>
+
 <body>
     <section >
         <div class="form">
             <h2>Login Here</h2>
-            <input type="email" name="email" placeholder="Enter your Email Here"><br>
-            <input type="password" name="#" placeholder="Enter your Password Here"><br>
-            <button class="bton"><a href="#">Login</a></button>
+            <input id="email" type="email" name="email" placeholder="Enter your Email Here"><br>
+            <input id="password" type="password" name="#" placeholder="Enter your Password Here"><br>
+            <button class="bton" onclick="submit()"><a href="#">Login</a></button>
             <p class="link">Don't have an account
             <a href="#">Signup here</a></p>
             <p class="liw">Login with</p>
